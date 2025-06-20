@@ -6,10 +6,33 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 
-export const WorkforceCard: React.FC<ConfigWorkforce[string]> = ({
+export const WorkforceCardMedium: React.FC<ConfigWorkforce[string]> = ({
+  name,
+  profession,
+  image_md,
+}) => {
+  return (
+    <div className="relative aspect-[4/5] last:border-b max-lg:even:border-r-0 max-md:border-r-0">
+      <Image
+        className="pointer-events-none size-full select-none"
+        src={image_md}
+        placeholder="blur"
+        unoptimized
+        alt={`${name}'s portrait`}
+      />
+      <div className="absolute inset-x-0 bottom-0 flex h-24 flex-col items-center justify-center gap-0.5 border-t bg-white/40 px-8 py-2 text-center backdrop-blur-xs">
+        <h4 className="font-medium tracking-tight">{name}</h4>
+        <p className="font-mono text-sm/6 text-stone-600">{profession}</p>
+      </div>
+    </div>
+  );
+};
+
+export const WorkforceCardLarge: React.FC<ConfigWorkforce[string]> = ({
   name,
   profession,
   image,
+  blur_data,
   styles,
   svg_props,
 }) => {
@@ -35,8 +58,9 @@ export const WorkforceCard: React.FC<ConfigWorkforce[string]> = ({
       <div className="pointer-events-none relative z-20 h-full w-auto">
         <Image
           src={image}
-          className="h-full w-auto grayscale transition-all group-hover:grayscale-0 group-hover:delay-(--animation-delay)"
+          className="h-full w-auto grayscale transition-all select-none group-hover:grayscale-0 group-hover:delay-(--animation-delay)"
           unoptimized
+          placeholder={blur_data}
           alt={`${name}'s portrait`}
         />
         <svg

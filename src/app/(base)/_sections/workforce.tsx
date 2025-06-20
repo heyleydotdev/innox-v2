@@ -1,7 +1,10 @@
 "use client";
 
 import { SectionSeparator } from "~/app/(base)/_components/section";
-import { WorkforceCard } from "~/app/(base)/_components/workforce-card";
+import {
+  WorkforceCardLarge,
+  WorkforceCardMedium,
+} from "~/app/(base)/_components/workforce-card";
 import { config_workforce } from "~/lib/configs/workforce";
 
 export const WorkforceSection: React.FC = () => {
@@ -12,47 +15,65 @@ export const WorkforceSection: React.FC = () => {
         <div className="px-cg relative overflow-hidden border-x py-16">
           <div className="relative flex max-w-lg flex-col gap-3 max-md:text-center">
             <h2 className="text-3xl font-medium tracking-tighter text-balance md:text-4xl">
-              Who You’ll Be Working With
+              Who You&apos;ll Be Working With
             </h2>
             <p className="text-sm/6 text-balance text-stone-600">
-              You’re not just hiring a team. You’re teaming up with us. Here’s
-              who you’ll be working with.
+              You&apos;re not just hiring a team. You&apos;re teaming up with
+              us. Here&apos;s who you&apos;ll be working with.
             </p>
           </div>
         </div>
-        <div className="group/container relative isolate overflow-hidden border-x border-t pt-(--content-spacing) [--content-spacing:--spacing(26)]">
-          <DashedGrid />
-          <WorkforceStroke />
-          <div className="relative aspect-[16/8]">
-            <WorkforceCard {...config_workforce["kaushal"]} />
-            <WorkforceCard {...config_workforce["raveen"]} />
-            <WorkforceCard {...config_workforce["kokila"]} />
-            <WorkforceCard {...config_workforce["darshi"]} />
-          </div>
-        </div>
+        <WorkforceSmall />
+        <WorkforceLarge />
       </div>
     </section>
   );
 };
 
-const DashedGrid: React.FC = () => {
+const WorkforceSmall: React.FC = () => {
   return (
-    <>
-      <div className="pointer-events-none absolute inset-0 grid grid-cols-6">
-        <div className="bg-dashed-vert col-start-2 h-full w-px" />
-        <div className="bg-dashed-vert h-full w-px" />
-        <div className="bg-dashed-vert h-full w-px" />
-        <div className="bg-dashed-vert h-full w-px" />
-        <div className="bg-dashed-vert h-full w-px" />
+    <div className="relative overflow-hidden border-x border-t lg:hidden">
+      <div className="bg-grid-dashed pointer-events-none absolute inset-0 -top-5 -left-5 [--bgd-size:--spacing(30)]" />
+      <WorkforceStrokeMedium />
+      <div className="grid grid-cols-1 divide-x divide-y md:grid-cols-2">
+        <WorkforceCardMedium {...config_workforce["kaushal"]} />
+        <WorkforceCardMedium {...config_workforce["raveen"]} />
+        <WorkforceCardMedium {...config_workforce["kokila"]} />
+        <WorkforceCardMedium {...config_workforce["darshi"]} />
       </div>
-      <div className="pointer-events-none absolute inset-0 grid grid-cols-1 grid-rows-5">
-        <div className="h-px" />
-        <div className="bg-dashed-horz h-px w-full" />
-        <div className="bg-dashed-horz h-px w-full" />
-        <div className="bg-dashed-horz h-px w-full" />
-        <div className="bg-dashed-horz h-px w-full" />
+    </div>
+  );
+};
+
+const WorkforceLarge: React.FC = () => {
+  return (
+    <div className="group/container relative isolate overflow-hidden border-x border-t pt-(--content-spacing) [--content-spacing:--spacing(26)] max-lg:hidden">
+      <div className="bg-grid-dashed pointer-events-none absolute inset-0 -top-5 -left-5" />
+      <WorkforceStroke />
+      <div className="relative aspect-[16/8]">
+        <WorkforceCardLarge {...config_workforce["kaushal"]} />
+        <WorkforceCardLarge {...config_workforce["raveen"]} />
+        <WorkforceCardLarge {...config_workforce["kokila"]} />
+        <WorkforceCardLarge {...config_workforce["darshi"]} />
       </div>
-    </>
+    </div>
+  );
+};
+
+const WorkforceStrokeMedium: React.FC = () => {
+  return (
+    <svg
+      className="pointer-events-none absolute inset-y-0 left-1/2 h-full -translate-x-1/2 text-stone-200"
+      viewBox="0 0 125 1280"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M122.398 1214.15H97.406v-54.96h-22.02v50.66h-25.05v-50.66H28.258v54.96H3.266v-86.11h119.132v86.11zM124 1050.46c0 7.39-1.003 14.25-3.02 20.56-1.978 6.31-4.893 11.88-8.75 16.7l-.727.89c-3.687 4.41-8.144 8.03-13.364 10.85-5.584 3.02-11.948 4.88-19.078 5.59l-1.1.11v-31.43l.867-.11c2.835-.38 5.374-1.16 7.625-2.32a18.285 18.285 0 005.754-4.58c1.586-1.89 2.804-4.15 3.646-6.79l.005-.01c.876-2.6 1.32-5.49 1.32-8.7 0-5.68-1.349-10.53-4.008-14.58-2.662-4.02-6.523-7.14-11.632-9.35-5.105-2.17-11.33-3.28-18.706-3.28-7.683 0-14.056 1.13-19.154 3.33-5.073 2.25-8.855 5.37-11.403 9.35v-.01c-2.513 4.02-3.789 8.8-3.789 14.37 0 3.14.391 5.96 1.159 8.48v.01c.77 2.56 1.883 4.79 3.328 6.69a18.471 18.471 0 004.981 4.51l.396.24c2.137 1.27 4.559 2.15 7.274 2.64l.826.15-.005.84-.17 29.46-.007 1.09-1.092-.11c-5.322-.52-10.552-2.11-15.688-4.75l.001-.01c-5.144-2.61-9.83-6.19-14.06-10.75h-.002c-4.215-4.58-7.558-10.15-10.037-16.7h0c-2.49-6.53-3.725-14-3.725-22.38 0-11.06 2.358-21.01 7.097-29.81h.003c4.784-8.78 11.75-15.7 20.867-20.778 9.142-5.088 20.223-7.607 33.2-7.607 13.017 0 24.12 2.559 33.265 7.728 9.116 5.157 16.061 12.137 20.806 20.957 4.738 8.79 7.097 18.64 7.097 29.51zM122.398 926.276l-.004.854c-.097 8.788-1.7 16.453-4.842 22.964v0c-3.204 6.758-7.83 11.994-13.876 15.674l-.568.34c-5.894 3.457-12.811 5.167-20.715 5.167-8.274 0-15.373-1.862-21.245-5.637l-.003-.001c-5.495-3.556-9.749-8.516-12.77-14.843L4.755 975.27l-1.49.836v-34.105l.52-.285 39.573-21.772v-13.343H3.266v-31.156h119.132v50.831zm-54.734-19.675v13.372c0 4.319.544 7.861 1.593 10.658 1.082 2.823 2.68 4.901 4.77 6.299 2.119 1.394 4.884 2.129 8.366 2.129 3.483 0 6.273-.736 8.435-2.136l.413-.276c2.002-1.396 3.532-3.389 4.577-6.027l.004-.011h.001c1.157-2.83 1.755-6.364 1.755-10.636v-13.372H67.664zM124 793.524c0 10.947-2.359 20.849-7.096 29.686v.001c-4.744 8.891-11.688 15.937-20.804 21.131-9.145 5.209-20.25 7.788-33.268 7.788s-24.122-2.579-33.267-7.788c-9.116-5.194-16.06-12.24-20.805-21.131v-.001c-4.736-8.837-7.095-18.739-7.095-29.686 0-10.987 2.379-20.911 7.155-29.749 4.783-8.849 11.724-15.874 20.801-21.067l.005-.003c9.143-5.169 20.227-7.728 33.206-7.728 13.017 0 24.12 2.559 33.265 7.728l.003.002c9.115 5.193 16.058 12.219 20.803 21.071 4.738 8.838 7.097 18.76 7.097 29.746zm-26.822 0c0-5.611-1.313-10.381-3.899-14.356-2.582-3.97-6.395-7.052-11.5-9.225v.001c-5.107-2.134-11.411-3.222-18.947-3.222-7.535 0-13.84 1.088-18.945 3.222-5.105 2.173-8.92 5.254-11.501 9.224-2.586 3.975-3.9 8.745-3.9 14.356 0 5.652 1.316 10.421 3.898 14.354l.002.004c2.582 3.969 6.396 7.03 11.5 9.164l.007.003c5.104 2.171 11.406 3.277 18.939 3.277 7.534 0 13.836-1.106 18.94-3.277l.006-.003c5.105-2.134 8.92-5.195 11.501-9.164l.002-.004c2.582-3.933 3.897-8.702 3.897-14.354zM122.398 715.298H97.406V662.11h-22.02v47.946h-25.05V662.11H3.266v-31.156h119.132v84.344zM122.398 537.353H72.869v.112l49.156 39.575.373.301v36.929l-1.632-1.337-51.702-42.293-64.24 43.115-1.558 1.045v-37.286l.454-.296 44.895-29.293-12.963-10.572H3.266v-31.156h119.132v31.156zM122.398 438.912c0 9.147-1.602 17.097-4.846 23.818v-.001c-3.204 6.759-7.83 11.995-13.876 15.675l-.568.34c-5.894 3.457-12.811 5.167-20.715 5.167-8.274 0-15.373-1.862-21.245-5.637l-.003-.001c-5.495-3.556-9.749-8.516-12.77-14.843l-43.62 24.476-1.49.836v-34.105l.52-.285 39.573-21.772v-13.343H3.266v-31.156h119.132v50.831zm-54.734-19.675v13.372c0 4.319.544 7.86 1.593 10.657 1.082 2.823 2.68 4.902 4.77 6.3 2.119 1.394 4.884 2.129 8.366 2.129 3.483 0 6.273-.736 8.435-2.136l.413-.276c2.002-1.396 3.532-3.389 4.577-6.027l.004-.011c1.157-2.83 1.756-6.364 1.756-10.636v-13.372H67.664zM124 306.159c0 10.947-2.359 20.849-7.096 29.686v.001c-4.744 8.891-11.688 15.937-20.804 21.131-9.145 5.209-20.25 7.788-33.268 7.788s-24.122-2.579-33.267-7.788c-9.116-5.194-16.06-12.24-20.805-21.131v-.001c-4.736-8.837-7.095-18.739-7.095-29.686 0-10.987 2.379-20.911 7.155-29.75 4.783-8.849 11.724-15.873 20.801-21.066l.005-.003c9.143-5.169 20.227-7.728 33.206-7.728 13.017 0 24.12 2.559 33.265 7.728l.003.002c9.115 5.193 16.058 12.219 20.803 21.071 4.738 8.838 7.097 18.761 7.097 29.746zm-26.822 0c0-5.61-1.313-10.381-3.899-14.356-2.582-3.97-6.395-7.052-11.5-9.225v.001c-5.107-2.134-11.411-3.222-18.947-3.222-7.535.001-13.84 1.088-18.945 3.222-5.105 2.173-8.92 5.254-11.501 9.224-2.586 3.975-3.9 8.745-3.9 14.356 0 5.652 1.316 10.421 3.898 14.354l.002.004c2.582 3.969 6.396 7.03 11.5 9.164l.007.003c5.104 2.171 11.406 3.277 18.939 3.277 7.534 0 13.836-1.106 18.94-3.277l.006-.003c5.105-2.134 8.92-5.195 11.501-9.164l.002-.004c2.582-3.933 3.897-8.702 3.897-14.354zM122.398 99.01l-.769.182-74.894 17.759 74.925 20.297.738.2v27.801l-.739.2-75.094 20.297 75.064 17.817.769.183v34.294l-1.287-.385L3.979 202.608l-.713-.212v-29.582l.708-.215 69.448-21.25-69.448-21.25-.708-.216v-29.522l.713-.214L121.11 65.042l1.287-.386V99.01z"
+        stroke="currentColor"
+        strokeWidth={2}
+      />
+    </svg>
   );
 };
 

@@ -71,6 +71,23 @@
     linear-gradient(to bottom, theme(--color-stone-950 / 4%) 1px, transparent 0);
 }
 
+@utility bg-grid-dashed {
+  --bgd-size: 160px;
+  --n: 8;
+  --t: 1px;
+  --g: 6px;
+
+  --c: var(--bgd-color, var(--color-border)) 25%, #0000 0;
+
+  background:
+    conic-gradient(at var(--g) var(--t), var(--c))
+      calc((var(--bgd-size) / var(--n) - var(--g) + var(--t)) / 2) 0 /
+      calc(var(--bgd-size) / var(--n)) var(--bgd-size),
+    conic-gradient(from 180deg at var(--t) var(--g), var(--c)) 0
+      calc((var(--bgd-size) / var(--n) - var(--g) + var(--t)) / 2) /
+      var(--bgd-size) calc(var(--bgd-size) / var(--n));
+}
+
 @utility bg-empty {
   --color: --alpha(var(--color-border) / 40%);
 
