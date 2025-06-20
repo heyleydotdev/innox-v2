@@ -18,16 +18,20 @@
   --color-border-hover: --alpha(var(--color-stone-950) / 15%);
   --color-border-focus: var(--color-stone-800);
 
-  --animate-blink: blink 0.8s infinite;
+  --animate-workforce-s: workforce-s 1.5s ease-out infinite;
 
   --breakpoint-xs: 30rem;
 
-  @keyframes blink {
-    from {
+  @keyframes workforce-s {
+    0% {
       opacity: 0;
+      transform: translateZ(0) translateY(20%);
     }
-    to {
+    20% {
       opacity: 1;
+    }
+    100% {
+      transform: translateZ(0) translateY(-100%);
     }
   }
 }
