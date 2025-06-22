@@ -1,6 +1,11 @@
 import Image from "next/image";
 
-import { SectionSeparator } from "~/app/(base)/_components/section";
+import {
+  Section,
+  SectionContainer,
+  SectionContent,
+  SectionSeparator,
+} from "~/app/(base)/_components/section";
 import Avatar1 from "~/app/(base)/_images/avatars/avatar_1.png";
 import Avatar2 from "~/app/(base)/_images/avatars/avatar_2.png";
 import Avatar3 from "~/app/(base)/_images/avatars/avatar_3.png";
@@ -8,15 +13,15 @@ import Avatar4 from "~/app/(base)/_images/avatars/avatar_4.png";
 
 export const HeroSection: React.FC = () => {
   return (
-    <section className="relative">
+    <Section>
       <SectionSeparator
         count="01"
         total="09"
         section="HERO"
         className="[&>div]:border-t-0"
       />
-      <div className="container">
-        <div className="px-cg relative overflow-hidden border-x py-20">
+      <SectionContainer>
+        <SectionContent className="py-20">
           <div className="bg-grid absolute -inset-1" />
           <div className="relative flex flex-col items-center gap-12">
             <div className="grid grid-cols-[auto_1px_minmax(0,1fr)] place-items-center gap-3 rounded-full border bg-white p-1.5 shadow-xs">
@@ -63,8 +68,8 @@ export const HeroSection: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
+        </SectionContent>
+      </SectionContainer>
+    </Section>
   );
 };

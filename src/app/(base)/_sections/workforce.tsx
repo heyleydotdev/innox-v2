@@ -1,6 +1,14 @@
 "use client";
 
-import { SectionSeparator } from "~/app/(base)/_components/section";
+import {
+  Section,
+  SectionContainer,
+  SectionContent,
+  SectionDescription,
+  SectionHeader,
+  SectionSeparator,
+  SectionTitle,
+} from "~/app/(base)/_components/section";
 import {
   WorkforceCardLarge,
   WorkforceCardMedium,
@@ -9,24 +17,22 @@ import { config_workforce } from "~/lib/configs/workforce";
 
 export const WorkforceSection: React.FC = () => {
   return (
-    <section>
+    <Section>
       <SectionSeparator count="04" total="09" section="WORKFORCE" />
-      <div className="container">
-        <div className="px-cg relative overflow-hidden border-x py-16">
-          <div className="relative flex max-w-lg flex-col gap-3 max-md:text-center">
-            <h2 className="text-3xl font-medium tracking-tighter text-balance md:text-4xl">
-              Who You&apos;ll Be Working With
-            </h2>
-            <p className="text-sm/6 text-balance text-stone-600">
+      <SectionContainer>
+        <SectionContent>
+          <SectionHeader>
+            <SectionTitle>Who You&apos;ll Be Working With</SectionTitle>
+            <SectionDescription>
               You&apos;re not just hiring a team. You&apos;re teaming up with
               us. Here&apos;s who you&apos;ll be working with.
-            </p>
-          </div>
-        </div>
+            </SectionDescription>
+          </SectionHeader>
+        </SectionContent>
         <WorkforceSmall />
         <WorkforceLarge />
-      </div>
-    </section>
+      </SectionContainer>
+    </Section>
   );
 };
 

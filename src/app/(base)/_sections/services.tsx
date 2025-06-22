@@ -1,6 +1,14 @@
 "use client";
 
-import { SectionSeparator } from "~/app/(base)/_components/section";
+import {
+  Section,
+  SectionContainer,
+  SectionContent,
+  SectionDescription,
+  SectionHeader,
+  SectionSeparator,
+  SectionTitle,
+} from "~/app/(base)/_components/section";
 import {
   ServiceCard,
   ServiceCardContainer,
@@ -18,20 +26,18 @@ import { cn } from "~/lib/utils";
 
 export const ServicesSection: React.FC = () => {
   return (
-    <section className="relative">
+    <Section>
       <SectionSeparator count="03" total="09" section="SERVICES" />
 
-      <div className="container">
-        <div className="px-cg relative overflow-hidden border-x py-16">
-          <div className="relative flex max-w-lg flex-col gap-3 max-md:text-center">
-            <h2 className="text-3xl font-medium tracking-tighter text-balance md:text-4xl">
-              Let&apos;s Build Something Great
-            </h2>
-            <p className="text-sm/6 text-balance text-stone-600">
+      <SectionContainer>
+        <SectionContent>
+          <SectionHeader>
+            <SectionTitle>Let&apos;s Build Something Great</SectionTitle>
+            <SectionDescription>
               Need a hand with design, development, or something in between?
               We&apos;ve got you covered.
-            </p>
-          </div>
+            </SectionDescription>
+          </SectionHeader>
           <div className="absolute right-62 bottom-16 aspect-square h-100">
             <svg
               className="text-border size-full"
@@ -62,7 +68,7 @@ export const ServicesSection: React.FC = () => {
               />
             </svg>
           </div>
-        </div>
+        </SectionContent>
         <div
           className={cn(
             "relative border-x border-t lg:px-26",
@@ -134,7 +140,7 @@ export const ServicesSection: React.FC = () => {
             </ServiceCardContainer>
           </div>
         </div>
-      </div>
-    </section>
+      </SectionContainer>
+    </Section>
   );
 };

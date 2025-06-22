@@ -8,15 +8,20 @@ import { animate } from "motion";
 import { motion, useMotionValue } from "motion/react";
 import useMeasure from "react-use-measure";
 
-import { SectionSeparator } from "~/app/(base)/_components/section";
+import {
+  Section,
+  SectionContainer,
+  SectionContent,
+  SectionSeparator,
+} from "~/app/(base)/_components/section";
 import { cn } from "~/lib/utils";
 
 export const PlatformsSection: React.FC = () => {
   return (
-    <section className="relative">
+    <Section>
       <SectionSeparator count="02" total="09" section="PLATFORMS" />
-      <div className="container">
-        <div className="px-cg grid grid-cols-1 gap-y-10 border-x py-10 md:grid-cols-4">
+      <SectionContainer>
+        <SectionContent className="grid grid-cols-1 gap-y-10 py-10 md:grid-cols-4">
           <p className="text-sm/6 text-balance text-stone-600 max-md:text-center">
             Our workflow runs on trusted industry standard platforms
           </p>
@@ -36,9 +41,9 @@ export const PlatformsSection: React.FC = () => {
               ))}
             </Slider>
           </div>
-        </div>
-      </div>
-    </section>
+        </SectionContent>
+      </SectionContainer>
+    </Section>
   );
 };
 

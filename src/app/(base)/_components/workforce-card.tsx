@@ -6,6 +6,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 
+// TODO: Blur Data url
 export const WorkforceCardMedium: React.FC<ConfigWorkforce[string]> = ({
   name,
   profession,
