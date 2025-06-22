@@ -1,8 +1,11 @@
+import type { Icons } from "~/components/icons";
+
 export interface ConfigPackages {
   [x: number]: {
     name: string;
+    icon: keyof typeof Icons;
     price: string;
-    duration?: string;
+    duration: string;
     tagline: string;
     features: Array<{
       title: string;
@@ -14,6 +17,7 @@ export interface ConfigPackages {
 export const config_packages = [
   {
     name: "Launch",
+    icon: "puzzle",
     price: "$1,200+",
     duration: "per month",
     tagline: "Ready to get your idea out there",
@@ -50,6 +54,7 @@ export const config_packages = [
   },
   {
     name: "Grow",
+    icon: "atom",
     price: "$2,500+",
     duration: "per month",
     tagline: "Let’s scale your brand together",
@@ -86,7 +91,9 @@ export const config_packages = [
   },
   {
     name: "Lead",
-    price: "Custom Quote",
+    icon: "earth",
+    price: "$5,000+",
+    duration: "per month",
     tagline: "Full custom build — you call the shots",
     features: [
       {

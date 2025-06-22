@@ -1,3 +1,4 @@
+import { Icons } from "~/components/icons";
 import { cn } from "~/lib/utils";
 
 export const PackagesContainer: React.FC<
@@ -25,12 +26,29 @@ export const Package: React.FC<React.ComponentPropsWithRef<"div">> = ({
   return (
     <div
       className={cn(
-        "relative flex snap-end flex-col gap-(--gutter) border-x bg-stone-800 py-(--gutter) [--gutter:--spacing(6)] md:[--gutter:--spacing(8)]",
+        "relative isolate flex snap-end flex-col gap-(--gutter) border-x bg-stone-800 py-(--gutter) [--gutter:--spacing(6)] md:[--gutter:--spacing(8)]",
         "after:absolute after:inset-y-0 after:-right-[calc(--spacing(4)+1px)] after:w-4 after:bg-stone-800 last:after:hidden",
         className,
       )}
       {...rest}
     />
+  );
+};
+
+export const PackageIcon: React.FC<
+  React.ComponentPropsWithRef<"div"> & { icon: keyof typeof Icons }
+> = ({ icon, className, ...rest }) => {
+  const IconComp = Icons[icon];
+
+  return (
+    <div className="absolute inset-0 -z-10 overflow-hidden">
+      <div
+        className={cn("absolute -top-10 -right-1/5 size-76", className)}
+        {...rest}
+      >
+        <IconComp className="size-full stroke-[0.5] text-[color-mix(in_oklab,var(--color-stone-700)_20%,var(--color-stone-800)_80%)]" />
+      </div>
+    </div>
   );
 };
 

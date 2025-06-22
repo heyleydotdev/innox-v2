@@ -9,6 +9,7 @@ import {
   PackageFeatures,
   PackageFeatureTitle,
   PackageHeader,
+  PackageIcon,
   PackagePricing,
   PackagesContainer,
   PackageTitle,
@@ -42,13 +43,14 @@ export const PackagesSection: React.FC = () => {
       <PackagesContainer>
         {config_packages.map((p, index) => (
           <Package key={index}>
+            <PackageIcon icon={p.icon} />
             <PackageHeader>
               <PackageTitle>{p.name}</PackageTitle>
               <PackageDescription>{p.tagline}</PackageDescription>
             </PackageHeader>
             <PackagePricing>
               <PackageAmount>{p.price}</PackageAmount>
-              {p.duration && <PackageDuration>{p.duration}</PackageDuration>}
+              <PackageDuration>{p.duration}</PackageDuration>
             </PackagePricing>
             <PackageButton>Continue with {p.name}</PackageButton>
             <PackageFeatures>

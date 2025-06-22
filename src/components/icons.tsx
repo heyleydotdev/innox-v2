@@ -2,11 +2,13 @@ import type { LucideProps } from "lucide-react";
 
 import { useId } from "react";
 import {
+  AtomIcon,
   ChevronRightIcon,
   CirclePowerIcon,
   EarthIcon,
   Loader2Icon,
   PaperclipIcon,
+  PuzzleIcon,
   SparklesIcon,
   UserCircle2,
 } from "lucide-react";
@@ -21,6 +23,8 @@ export const Icons = {
   chevronRight: ChevronRightIcon,
   userCircle: UserCircle2,
   paperclip: PaperclipIcon,
+  puzzle: PuzzleIcon,
+  atom: AtomIcon,
   star: (props: LucideProps) => (
     <svg
       stroke="currentColor"
