@@ -85,7 +85,7 @@
 }
 
 @utility bg-grid {
-  background-size: 40px 40px;
+  background-size: 60px 60px;
   background-image:
     linear-gradient(to right, theme(--color-stone-950 / 4%) 1px, transparent 0),
     linear-gradient(to bottom, theme(--color-stone-950 / 4%) 1px, transparent 0);

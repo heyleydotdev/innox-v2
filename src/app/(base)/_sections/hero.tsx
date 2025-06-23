@@ -24,7 +24,7 @@ export const HeroSection: React.FC = () => {
         <SectionContent className="py-20">
           <div className="bg-grid absolute -inset-1" />
           <div className="relative flex flex-col items-center gap-12">
-            <div className="grid grid-cols-[auto_1px_minmax(0,1fr)] place-items-center gap-3 rounded-full border bg-white p-1.5 shadow-xs">
+            <div className="grid grid-cols-[auto_1px_minmax(0,1fr)] place-items-center gap-3 overflow-hidden rounded-full border bg-white p-1.5 shadow-xs">
               <div className="flex items-center -space-x-1">
                 {[Avatar1, Avatar2, Avatar3, Avatar4].map((avatar, index) => (
                   <Image
@@ -39,15 +39,17 @@ export const HeroSection: React.FC = () => {
                 ))}
               </div>
               <div className="bg-border h-4 w-px" />
-              <p className="mr-2 text-[0.8rem]/6 text-stone-500">
+              <p className="mr-2 text-[0.8rem]/6 whitespace-nowrap text-stone-500">
                 Trusted by{" "}
-                <span className="font-medium text-stone-950">750+</span> clients
-                for seamless digital solutions
+                <span className="font-medium text-stone-950">750+</span> clients{" "}
+                <span className="max-md:hidden">
+                  for seamless digital solutions
+                </span>
               </p>
             </div>
 
             <div className="flex flex-col items-center justify-center gap-6 text-center">
-              <h1 className="text-5xl tracking-tighter text-balance md:text-7xl lg:text-8xl">
+              <h1 className="text-5xl tracking-tighter text-balance max-md:font-medium md:text-7xl lg:text-8xl">
                 Delivering Innovative and Effective Solutions
               </h1>
               <p className="mx-auto max-w-3xl text-sm/6 text-balance text-stone-600 md:text-base/7">

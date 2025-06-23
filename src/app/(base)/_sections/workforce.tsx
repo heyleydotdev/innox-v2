@@ -38,7 +38,7 @@ export const WorkforceSection: React.FC = () => {
 
 const WorkforceSmall: React.FC = () => {
   return (
-    <div className="relative overflow-hidden border-x border-t lg:hidden">
+    <div className="relative overflow-hidden border-x border-t bg-stone-50 lg:hidden">
       <div className="bg-grid-dashed pointer-events-none absolute inset-0 -top-5 -left-5 [--bgd-size:--spacing(30)]" />
       <WorkforceStrokeMedium />
       <div className="grid grid-cols-1 divide-x divide-y md:grid-cols-2">
@@ -53,7 +53,7 @@ const WorkforceSmall: React.FC = () => {
 
 const WorkforceLarge: React.FC = () => {
   return (
-    <div className="group/container relative isolate overflow-hidden border-x border-t pt-(--content-spacing) [--content-spacing:--spacing(26)] max-lg:hidden">
+    <div className="group/container relative isolate overflow-hidden border-x border-t bg-stone-50 pt-(--content-spacing) [--content-spacing:--spacing(26)] max-lg:hidden">
       <div className="bg-grid-dashed pointer-events-none absolute inset-0 -top-5 -left-5" />
       <WorkforceStroke />
       <div className="relative aspect-[16/8]">

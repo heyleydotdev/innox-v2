@@ -23,6 +23,7 @@ import {
   SectionSeparator,
   SectionTitle,
 } from "~/app/(base)/_components/section";
+import { Icons } from "~/components/icons";
 import { config_packages } from "~/lib/configs/packages";
 
 export const PackagesSection: React.FC = () => {
@@ -66,6 +67,13 @@ export const PackagesSection: React.FC = () => {
           </Package>
         ))}
       </PackagesContainer>
+      <SectionContainer className="lg:hidden">
+        <SectionContent className="py-3.5">
+          <p className="flex items-center justify-center gap-2 text-[0.8rem]/6 text-stone-600">
+            <Icons.swipe className="size-4" /> Swipe left or right for more
+          </p>
+        </SectionContent>
+      </SectionContainer>
     </Section>
   );
 };

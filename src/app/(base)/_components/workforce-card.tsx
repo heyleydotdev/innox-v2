@@ -13,7 +13,7 @@ export const WorkforceCardMedium: React.FC<ConfigWorkforce[string]> = ({
   image_md,
 }) => {
   return (
-    <div className="relative aspect-[4/5] last:border-b max-lg:even:border-r-0 max-md:border-r-0">
+    <div className="relative aspect-[4/5] max-lg:even:border-r-0 max-md:border-r-0 md:nth-last-[2]:border-b-0">
       <Image
         className="pointer-events-none size-full select-none"
         src={image_md}

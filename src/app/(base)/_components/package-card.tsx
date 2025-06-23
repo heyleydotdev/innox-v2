@@ -43,7 +43,10 @@ export const PackageIcon: React.FC<
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden">
       <div
-        className={cn("absolute -top-10 -right-1/5 size-76", className)}
+        className={cn(
+          "absolute -top-10 -right-1/5 size-60 md:size-76",
+          className,
+        )}
         {...rest}
       >
         <IconComp className="size-full stroke-[0.5] text-[color-mix(in_oklab,var(--color-stone-700)_20%,var(--color-stone-800)_80%)]" />
