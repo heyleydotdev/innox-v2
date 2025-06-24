@@ -61,15 +61,15 @@ export const Comments: React.FC<CommentsProps> = ({ init_comments }) => {
       {comments.map((item, index) => (
         <div
           key={index}
-          className="xs:p-8 cursor-default p-6 hover:bg-white max-lg:nth-[2n]:border-r-0 max-md:border-r-0 md:nth-last-[-n+2]:border-b-0 lg:nth-[3n]:border-r-0 lg:nth-last-[-n+3]:border-b-0"
+          className="cursor-default p-6 hover:bg-white max-lg:nth-[2n]:border-r-0 max-md:border-r-0 md:p-8 md:nth-last-[-n+2]:border-b-0 lg:nth-[3n]:border-r-0 lg:nth-last-[-n+3]:border-b-0"
         >
           <AnimatePresence initial={false} mode="wait">
             <motion.div
               key={item.name}
               className="flex size-full origin-center transform-gpu flex-col gap-6 will-change-transform"
-              initial={{ opacity: 0.2, scale: 0.9, filter: "blur(5px)" }}
+              initial={{ opacity: 0.2, scale: 0.9, filter: "blur(8px)" }}
               animate={{ opacity: 1, scale: 1, filter: "blur(0)" }}
-              exit={{ opacity: 0.2, scale: 0.9, filter: "blur(5px)" }}
+              exit={{ opacity: 0.2, scale: 0.9, filter: "blur(8px)" }}
               transition={{
                 type: "spring",
                 bounce: 0,

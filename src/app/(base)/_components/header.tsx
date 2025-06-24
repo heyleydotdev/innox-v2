@@ -1,5 +1,6 @@
 import type { NavLinkProps } from "~/components/nav-link";
 
+import { Logo } from "~/components/logo";
 import { NavLink } from "~/components/nav-link";
 import { cn } from "~/lib/utils";
 
@@ -7,8 +8,10 @@ export const BaseHeader: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 h-14 border-b bg-white">
       <div className="container flex h-full items-center gap-6">
-        <span>Logo</span>
-        <div className="flex h-full items-center">
+        <span>
+          <Logo className="h-8" />
+        </span>
+        <div className="flex h-full items-center max-md:hidden">
           <NavigationLink href="/">Services</NavigationLink>
           <NavigationLink href="/">Workforce</NavigationLink>
           <NavigationLink href="/">Packages</NavigationLink>

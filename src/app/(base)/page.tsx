@@ -16,7 +16,6 @@ export default function HomePage() {
       <PackagesSection />
       <CommentsSection />
       <SupportSection />
-      <div className="h-screen"></div>
     </div>
   );
 }

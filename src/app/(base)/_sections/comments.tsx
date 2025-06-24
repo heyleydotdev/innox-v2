@@ -1,7 +1,7 @@
 import {
   Comments,
   CommentsContainer,
-} from "~/app/(base)/_components/comments-card";
+} from "~/app/(base)/_components/comment-card";
 import {
   Section,
   SectionContainer,

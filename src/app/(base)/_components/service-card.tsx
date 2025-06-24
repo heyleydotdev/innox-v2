@@ -38,7 +38,7 @@ export const ServiceCardHeader: React.FC<
   return (
     <div
       className={cn(
-        "relative flex flex-1 flex-col gap-1 border-b p-8",
+        "relative flex flex-1 flex-col gap-1 border-b p-6 md:p-8",
         className,
       )}
       {...rest}
