@@ -67,6 +67,7 @@ export const ContactButton: React.FC<
         "flex h-9 w-max cursor-pointer items-center justify-center rounded-lg bg-stone-800 px-4 text-[0.8rem]/6 text-white hover:opacity-95",
         className,
       )}
+      target="_blank"
       {...rest}
     />
   );

@@ -17,8 +17,8 @@ import { config_workforce } from "~/lib/configs/workforce";
 
 export const WorkforceSection: React.FC = () => {
   return (
-    <Section>
-      <SectionSeparator count="04" total="09" section="WORKFORCE" />
+    <Section id="workforce">
+      <SectionSeparator title="Workforce" />
       <SectionContainer>
         <SectionContent>
           <SectionHeader>

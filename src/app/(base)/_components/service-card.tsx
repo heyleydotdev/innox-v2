@@ -46,13 +46,6 @@ export const ServiceCardHeader: React.FC<
   );
 };
 
-export const ServiceCardIcon: React.FC<React.ComponentPropsWithRef<"h4">> = ({
-  className,
-  ...rest
-}) => {
-  return <h4 className={cn("font-medium", className)} {...rest} />;
-};
-
 export const ServiceCardTitle: React.FC<React.ComponentPropsWithRef<"h4">> = ({
   className,
   ...rest
@@ -75,12 +68,26 @@ export const ServiceCardContent: React.FC<
   React.ComponentPropsWithRef<"div">
 > = ({ className, ...rest }) => {
   return (
-    <div className={cn("relative overflow-hidden", className)} {...rest} />
+    <div
+      className={cn("group relative isolate overflow-hidden", className)}
+      {...rest}
+    />
   );
 };
 
 export const ServiceCardImage: React.FC<
   React.ComponentPropsWithRef<typeof Image>
-> = ({ alt, ...rest }) => {
-  return <Image placeholder="blur" unoptimized alt={alt} {...rest} />;
+> = ({ className, alt, ...rest }) => {
+  return (
+    <Image
+      className={cn(
+        "transition-[filter] duration-500 group-hover:contrast-[115%]",
+        className,
+      )}
+      placeholder="blur"
+      unoptimized
+      alt={alt}
+      {...rest}
+    />
+  );
 };

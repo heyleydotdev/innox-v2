@@ -26,7 +26,7 @@ export const Package: React.FC<React.ComponentPropsWithRef<"div">> = ({
   return (
     <div
       className={cn(
-        "relative isolate flex snap-end flex-col gap-(--gutter) border-x bg-stone-800 py-(--gutter) [--gutter:--spacing(6)] md:[--gutter:--spacing(8)]",
+        "group/container relative isolate flex snap-end flex-col gap-(--gutter) border-x bg-stone-800 py-(--gutter) [--gutter:--spacing(6)] md:[--gutter:--spacing(8)]",
         "after:absolute after:inset-y-0 after:-right-[calc(--spacing(4)+1px)] after:w-4 after:bg-stone-800 last:after:hidden",
         className,
       )}
@@ -123,7 +123,7 @@ export const PackageButton: React.FC<React.ComponentPropsWithRef<"button">> = ({
   return (
     <button
       className={cn(
-        "group focus-visible:ring-border mx-(--gutter) flex h-9 cursor-pointer items-center justify-between rounded-lg bg-stone-50/90 px-4 text-sm/6 font-medium text-stone-950 transition-colors hover:bg-stone-50 focus-visible:ring-4 focus-visible:outline-none",
+        "group focus-visible:ring-border mx-(--gutter) flex h-9 cursor-pointer items-center justify-between rounded-lg border border-transparent bg-stone-50/90 px-4 text-sm/6 font-medium text-stone-950 transition-colors hover:bg-stone-50 focus-visible:ring-4 focus-visible:outline-none",
         className,
       )}
       {...rest}

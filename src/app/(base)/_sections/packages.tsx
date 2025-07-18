@@ -14,6 +14,7 @@ import {
   PackagesContainer,
   PackageTitle,
 } from "~/app/(base)/_components/package-card";
+import { PackageDialog } from "~/app/(base)/_components/package-dialog";
 import {
   Section,
   SectionContainer,
@@ -28,8 +29,8 @@ import { config_packages } from "~/lib/configs/packages";
 
 export const PackagesSection: React.FC = () => {
   return (
-    <Section>
-      <SectionSeparator count="05" total="09" section="PACKAGES" />
+    <Section id="packages">
+      <SectionSeparator title="Packages" />
       <SectionContainer>
         <SectionContent>
           <SectionHeader>
@@ -53,7 +54,9 @@ export const PackagesSection: React.FC = () => {
               <PackageAmount>{p.price}</PackageAmount>
               <PackageDuration>{p.duration}</PackageDuration>
             </PackagePricing>
-            <PackageButton>Continue with {p.name}</PackageButton>
+            <PackageDialog asChild>
+              <PackageButton>Continue with {p.name}</PackageButton>
+            </PackageDialog>
             <PackageFeatures>
               {p.features.map((f, subindex) => (
                 <PackageFeature key={subindex}>

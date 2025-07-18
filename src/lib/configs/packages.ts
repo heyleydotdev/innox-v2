@@ -18,7 +18,7 @@ export const config_packages = [
   {
     name: "Launch",
     icon: "puzzle",
-    price: "$1,200+",
+    price: "$750+",
     duration: "per month",
     tagline: "Ready to get your idea out there",
     features: [
@@ -55,7 +55,7 @@ export const config_packages = [
   {
     name: "Grow",
     icon: "atom",
-    price: "$2,500+",
+    price: "$1,500+",
     duration: "per month",
     tagline: "Let’s scale your brand together",
     features: [
@@ -92,7 +92,7 @@ export const config_packages = [
   {
     name: "Lead",
     icon: "earth",
-    price: "$5,000+",
+    price: "$6,000+",
     duration: "per month",
     tagline: "Full custom build — you call the shots",
     features: [

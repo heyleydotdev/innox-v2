@@ -15,8 +15,8 @@ import { config_comments } from "~/lib/configs/comments";
 
 export const CommentsSection: React.FC = () => {
   return (
-    <Section>
-      <SectionSeparator section="Comments" count="06" total="09" />
+    <Section id="comments">
+      <SectionSeparator title="Comments" />
       <SectionContainer>
         <SectionContent>
           <SectionHeader>

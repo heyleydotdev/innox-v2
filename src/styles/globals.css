@@ -27,7 +27,11 @@
   --color-border-hover: --alpha(var(--color-stone-950) / 15%);
   --color-border-focus: var(--color-stone-800);
 
-  --animate-workforce-s: workforce-s 1.5s ease-out infinite;
+  --animate-workforce-s: workforce-s 1.5s var(--ease-out) infinite;
+  --animate-mm-overlay-in: mm-overlay-in 200ms var(--ease-out);
+  --animate-mm-overlay-out: mm-overlay-out 100ms var(--ease-in);
+  --animate-mm-content-in: mm-content-in 200ms var(--ease-out);
+  --animate-mm-content-out: mm-content-out 100ms var(--ease-in);
 
   --breakpoint-xs: 30rem;
 
@@ -41,6 +45,46 @@
     }
     100% {
       transform: translateZ(0) translateY(-100%);
+    }
+  }
+
+  @keyframes mm-overlay-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes mm-overlay-out {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes mm-content-in {
+    from {
+      opacity: 0;
+      transform: translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+  }
+
+  @keyframes mm-content-out {
+    from {
+      opacity: 1;
+      transform: translateY(0rem);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(4rem);
     }
   }
 }
@@ -69,6 +113,8 @@
     color-scheme: dark;
 
     --color-border: --alpha(var(--color-white) / 10%);
+    --color-border-hover: --alpha(var(--color-white) / 15%);
+    --color-border-focus: var(--color-stone-300);
 
     @apply text-stone-50;
   }

@@ -6,18 +6,18 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
 
-// TODO: Blur Data url
 export const WorkforceCardMedium: React.FC<ConfigWorkforce[string]> = ({
   name,
   profession,
   image_md,
+  blur_data_md,
 }) => {
   return (
     <div className="relative aspect-[4/5] max-lg:even:border-r-0 max-md:border-r-0 md:nth-last-[2]:border-b-0">
       <Image
         className="pointer-events-none size-full select-none"
         src={image_md}
-        placeholder="blur"
+        placeholder={blur_data_md}
         unoptimized
         alt={`${name}'s portrait`}
       />

@@ -8,13 +8,7 @@ import { LogoStroke, LogoTextStroke } from "~/components/logo";
 export const BaseFooter: React.FC = () => {
   return (
     <footer className="border-t">
-      <SectionSeparator
-        section="Footer"
-        count="08"
-        total="09"
-        className="[&>div]:border-t-0"
-      />
-
+      <SectionSeparator title="Footer" className="[&>div]:border-t-0" />
       <SectionContainer>
         <SectionContent className="divide-y">
           <div className="py-8">

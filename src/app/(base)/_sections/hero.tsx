@@ -14,12 +14,7 @@ import Avatar4 from "~/app/(base)/_images/avatars/avatar_4.png";
 export const HeroSection: React.FC = () => {
   return (
     <Section>
-      <SectionSeparator
-        count="01"
-        total="09"
-        section="HERO"
-        className="[&>div]:border-t-0"
-      />
+      <SectionSeparator title="Hero" className="[&>div]:border-t-0" />
       <SectionContainer>
         <SectionContent className="py-20">
           <div className="bg-grid absolute -inset-1" />

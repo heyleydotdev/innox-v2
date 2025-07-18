@@ -19,7 +19,7 @@ import { cn } from "~/lib/utils";
 export const PlatformsSection: React.FC = () => {
   return (
     <Section>
-      <SectionSeparator count="02" total="09" section="PLATFORMS" />
+      <SectionSeparator title="Platforms" />
       <SectionContainer>
         <SectionContent className="grid grid-cols-1 gap-y-10 py-10 md:grid-cols-4">
           <p className="text-sm/6 text-balance text-stone-600 max-md:text-center">
@@ -36,7 +36,7 @@ export const PlatformsSection: React.FC = () => {
                   width={90}
                   height={30}
                   unoptimized
-                  alt=""
+                  alt={`Platform logo ${index + 1}`}
                 />
               ))}
             </Slider>

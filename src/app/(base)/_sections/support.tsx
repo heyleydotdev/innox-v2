@@ -19,8 +19,8 @@ import { Icons } from "~/components/icons";
 
 export const SupportSection: React.FC = () => {
   return (
-    <Section>
-      <SectionSeparator section="SUPPORT" count="07" total="09" />
+    <Section id="support">
+      <SectionSeparator title="Support" />
       <SectionContainer>
         <SectionContent>
           <SectionHeader>
@@ -42,7 +42,7 @@ export const SupportSection: React.FC = () => {
           <div className="relative grid grid-cols-1 border bg-white max-md:divide-y md:grid-cols-3 md:divide-x">
             <Contact>
               <ContactIcon>
-                <Icons.instagram />
+                <Icons.instagram_text />
               </ContactIcon>
               <ContactContent>
                 <ContactTitle>Follow us on Instagram.</ContactTitle>
@@ -51,7 +51,9 @@ export const SupportSection: React.FC = () => {
                   we’re working on next.
                 </ContactDescription>
               </ContactContent>
-              <ContactButton href="/#">Follow @_innox_pro_</ContactButton>
+              <ContactButton href="https://www.instagram.com/_innox_pro_/">
+                Follow @_innox_pro_
+              </ContactButton>
             </Contact>
             <Contact>
               <ContactIcon>
@@ -63,7 +65,9 @@ export const SupportSection: React.FC = () => {
                   Connect with others, share feedback, and stay in the loop.
                 </ContactDescription>
               </ContactContent>
-              <ContactButton href="/#">Join our Community</ContactButton>
+              <ContactButton href="https://discord.gg/VMRr9RksdH">
+                Join our Community
+              </ContactButton>
             </Contact>
             <Contact>
               <ContactIcon>
@@ -76,7 +80,9 @@ export const SupportSection: React.FC = () => {
                   possible.
                 </ContactDescription>
               </ContactContent>
-              <ContactButton href="/#">Get Quick Support</ContactButton>
+              <ContactButton href="https://t.me/INNOXOFFICIAL">
+                Get Quick Support
+              </ContactButton>
             </Contact>
           </div>
         </div>
