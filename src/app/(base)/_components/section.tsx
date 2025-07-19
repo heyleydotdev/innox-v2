@@ -87,7 +87,10 @@ export const SectionSeparator: React.FC<SectionSeparatorProps> = ({
     <div className={cn("container", className)} {...rest}>
       <div className="pointer-events-none grid h-9 grid-cols-[--spacing(26)_minmax(0,1fr)_--spacing(26)] border select-none">
         <div>
-          <p className="text-center font-mono text-xs/9 tracking-tight text-stone-300">
+          <p
+            className="text-center font-mono text-xs/9 tracking-tight text-stone-300"
+            aria-label={`Section ${c}`}
+          >
             [{" "}
             <TextScramble
               as="span"
@@ -105,7 +108,10 @@ export const SectionSeparator: React.FC<SectionSeparatorProps> = ({
         </div>
         <div className="border-x" />
         <div>
-          <p className="text-center font-mono text-xs/9 tracking-tight text-stone-300 uppercase">
+          <p
+            className="text-center font-mono text-xs/9 tracking-tight text-stone-300 uppercase"
+            aria-label={title}
+          >
             [ <span className="text-stone-800">{title}</span> ]
           </p>
         </div>
