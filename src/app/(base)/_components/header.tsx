@@ -68,7 +68,7 @@ const SocialLink: React.FC<SocialNavigation> = ({ icon, name, href }) => {
 
   return (
     <Link
-      className="flex h-full w-9 items-center justify-center text-zinc-600 transition-colors hover:text-stone-950 focus:outline-0 focus-visible:text-stone-950"
+      className="flex h-full w-9 items-center justify-center text-stone-600 transition-colors hover:text-stone-950 focus:outline-0 focus-visible:text-stone-950"
       href={href}
       target="_blank"
       title={name}

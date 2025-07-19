@@ -17,7 +17,7 @@ export const MobileMenu: React.FC = () => {
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger className="group -mr-4 flex h-full w-12 cursor-pointer items-center justify-center text-stone-900 focus:outline-0 md:hidden">
+      <Dialog.Trigger className="group -mr-4 flex h-full w-12 cursor-pointer items-center justify-center text-stone-950 focus:outline-0 md:hidden">
         <svg
           width={16}
           height={16}
@@ -44,8 +44,8 @@ export const MobileMenu: React.FC = () => {
         </svg>
       </Dialog.Trigger>
       <Dialog.Portal>
-        <Dialog.Overlay className="data-[state=open]:animate-mm-overlay-in data-[state=closed]:animate-mm-overlay-out fixed inset-0 z-50 size-full bg-stone-900/40" />
-        <Dialog.Content className="data-[state=open]:animate-mm-content-in data-[state=closed]:animate-mm-content-out fixed inset-x-0 bottom-0 z-50 w-full border-t bg-white">
+        <Dialog.Overlay className="data-[state=open]:animate-dialog-overlay-in data-[state=closed]:animate-dialog-overlay-out fixed inset-0 z-50 size-full bg-stone-950/40" />
+        <Dialog.Content className="data-[state=open]:animate-dialog-in-sm data-[state=closed]:animate-dialog-out-sm fixed inset-x-0 bottom-0 z-50 w-full border-t bg-white">
           <div
             className={cn(
               "relative [--width:max(var(--container-padding),calc((100%-var(--breakpoint-xs))/2+var(--container-padding)))]",
@@ -145,7 +145,7 @@ const NavigationLink: React.FC<NavigationLinkProps> = ({
   return (
     <Component
       className={cn(
-        "px-4 py-2.5 text-[13px]/6 text-stone-900 transition-colors active:bg-stone-100",
+        "px-4 py-2.5 text-[13px]/6 text-stone-950 transition-colors active:bg-stone-100",
         className,
       )}
       href={href.toString()}

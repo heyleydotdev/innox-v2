@@ -25,7 +25,7 @@ import {
   SectionTitle,
 } from "~/app/(base)/_components/section";
 import { Icons } from "~/components/icons";
-import { config_packages } from "~/lib/configs/packages";
+import { config_packages, ConfigPackageTitles } from "~/lib/configs/packages";
 
 export const PackagesSection: React.FC = () => {
   return (
@@ -47,15 +47,17 @@ export const PackagesSection: React.FC = () => {
           <Package key={index}>
             <PackageIcon icon={p.icon} />
             <PackageHeader>
-              <PackageTitle>{p.name}</PackageTitle>
+              <PackageTitle>{ConfigPackageTitles[p.name]}</PackageTitle>
               <PackageDescription>{p.tagline}</PackageDescription>
             </PackageHeader>
             <PackagePricing>
               <PackageAmount>{p.price}</PackageAmount>
               <PackageDuration>{p.duration}</PackageDuration>
             </PackagePricing>
-            <PackageDialog asChild>
-              <PackageButton>Continue with {p.name}</PackageButton>
+            <PackageDialog package_key={p.name} asChild>
+              <PackageButton>
+                Continue with {ConfigPackageTitles[p.name]}
+              </PackageButton>
             </PackageDialog>
             <PackageFeatures>
               {p.features.map((f, subindex) => (

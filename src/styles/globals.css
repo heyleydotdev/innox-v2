@@ -25,13 +25,15 @@
 
   --color-border: --alpha(var(--color-stone-950) / 10%);
   --color-border-hover: --alpha(var(--color-stone-950) / 15%);
-  --color-border-focus: var(--color-stone-800);
+  --color-border-focus: var(--color-amber-500);
 
   --animate-workforce-s: workforce-s 1.5s var(--ease-out) infinite;
-  --animate-mm-overlay-in: mm-overlay-in 200ms var(--ease-out);
-  --animate-mm-overlay-out: mm-overlay-out 100ms var(--ease-in);
-  --animate-mm-content-in: mm-content-in 200ms var(--ease-out);
-  --animate-mm-content-out: mm-content-out 100ms var(--ease-in);
+  --animate-dialog-overlay-in: dialog-overlay-in 200ms var(--ease-out);
+  --animate-dialog-overlay-out: dialog-overlay-out 100ms var(--ease-in);
+
+  --animate-dialog-in: dialog-in 100ms var(--ease-out);
+  --animate-dialog-in-sm: dialog-in-sm 200ms var(--ease-out);
+  --animate-dialog-out-sm: dialog-out-sm 100ms var(--ease-in);
 
   --breakpoint-xs: 30rem;
 
@@ -48,7 +50,7 @@
     }
   }
 
-  @keyframes mm-overlay-in {
+  @keyframes dialog-overlay-in {
     from {
       opacity: 0;
     }
@@ -57,7 +59,7 @@
     }
   }
 
-  @keyframes mm-overlay-out {
+  @keyframes dialog-overlay-out {
     from {
       opacity: 1;
     }
@@ -66,25 +68,36 @@
     }
   }
 
-  @keyframes mm-content-in {
+  @keyframes dialog-in {
     from {
       opacity: 0;
-      transform: translateY(1rem);
+      transform: translateZ(0) scale(0.95);
     }
     to {
       opacity: 1;
-      transform: translateY(0rem);
+      transform: translateZ(0) scale(1);
     }
   }
 
-  @keyframes mm-content-out {
+  @keyframes dialog-in-sm {
+    from {
+      opacity: 0;
+      transform: translateZ(0) translateY(1rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateZ(0) translateY(0rem);
+    }
+  }
+
+  @keyframes dialog-out-sm {
     from {
       opacity: 1;
-      transform: translateY(0rem);
+      transform: translateZ(0) translateY(0rem);
     }
     to {
       opacity: 0;
-      transform: translateY(4rem);
+      transform: translateZ(0) translateY(4rem);
     }
   }
 }
@@ -114,7 +127,7 @@
 
     --color-border: --alpha(var(--color-white) / 10%);
     --color-border-hover: --alpha(var(--color-white) / 15%);
-    --color-border-focus: var(--color-stone-300);
+    --color-border-focus: var(--color-amber-700);
 
     @apply text-stone-50;
   }

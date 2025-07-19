@@ -123,7 +123,7 @@ export const PackageButton: React.FC<React.ComponentPropsWithRef<"button">> = ({
   return (
     <button
       className={cn(
-        "group focus-visible:ring-border mx-(--gutter) flex h-9 cursor-pointer items-center justify-between rounded-lg border border-transparent bg-stone-50/90 px-4 text-sm/6 font-medium text-stone-950 transition-colors hover:bg-stone-50 focus-visible:ring-4 focus-visible:outline-none",
+        "group focus-visible:ring-border-focus mx-(--gutter) flex h-9 cursor-pointer items-center justify-between border border-transparent bg-stone-50/90 px-4 text-sm/6 font-medium text-stone-950 transition-colors hover:bg-stone-50 focus-visible:ring-2 focus-visible:outline-none",
         className,
       )}
       {...rest}

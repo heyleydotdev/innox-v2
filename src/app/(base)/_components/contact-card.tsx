@@ -64,7 +64,7 @@ export const ContactButton: React.FC<
   return (
     <Link
       className={cn(
-        "flex h-9 w-max cursor-pointer items-center justify-center rounded-lg bg-stone-800 px-4 text-[0.8rem]/6 text-white hover:opacity-95",
+        "focus-visible:ring-border-focus flex h-9 w-max cursor-pointer items-center justify-center bg-stone-800 px-4 text-[0.8rem]/6 text-white hover:opacity-95 focus-visible:ring-2 focus-visible:outline-0",
         className,
       )}
       target="_blank"

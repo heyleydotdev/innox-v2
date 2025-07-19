@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+import { CtaForm } from "~/app/(base)/_components/cta-form";
 import {
   Section,
   SectionContainer,
@@ -19,7 +20,7 @@ export const HeroSection: React.FC = () => {
         <SectionContent className="py-20">
           <div className="bg-grid absolute -inset-1" />
           <div className="relative flex flex-col items-center gap-12">
-            <div className="grid grid-cols-[auto_1px_minmax(0,1fr)] place-items-center gap-3 overflow-hidden rounded-full border bg-white p-1.5 shadow-xs">
+            <div className="grid grid-cols-[auto_1px_minmax(0,1fr)] place-items-center gap-3 overflow-hidden border bg-white p-1.5 shadow-xs">
               <div className="flex items-center -space-x-1">
                 {[Avatar1, Avatar2, Avatar3, Avatar4].map((avatar, index) => (
                   <Image
@@ -54,16 +55,7 @@ export const HeroSection: React.FC = () => {
               </p>
             </div>
 
-            <div className="mx-auto grid w-full max-w-sm grid-cols-[minmax(0,1fr)_auto] gap-2">
-              <input
-                type="text"
-                placeholder="johndoe@example.com"
-                className="outline-border hover:outline-border-hover focus-visible:outline-border-focus flex h-10 items-center rounded-lg bg-white px-4 text-sm/6 shadow-xs outline-1 -outline-offset-1 focus-visible:outline-2"
-              />
-              <button className="flex h-10 items-center rounded-lg bg-stone-800 px-5 text-sm/6 text-white shadow-xs">
-                Get Started
-              </button>
-            </div>
+            <CtaForm />
           </div>
         </SectionContent>
       </SectionContainer>

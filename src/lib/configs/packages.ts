@@ -1,8 +1,14 @@
 import type { Icons } from "~/components/icons";
 
+export enum ConfigPackageTitles {
+  "launch" = "Launch",
+  "grow" = "Grow",
+  "lead" = "Lead",
+}
+
 export interface ConfigPackages {
   [x: number]: {
-    name: string;
+    name: keyof typeof ConfigPackageTitles;
     icon: keyof typeof Icons;
     price: string;
     duration: string;
@@ -16,7 +22,7 @@ export interface ConfigPackages {
 
 export const config_packages = [
   {
-    name: "Launch",
+    name: "launch",
     icon: "puzzle",
     price: "$750+",
     duration: "per month",
@@ -53,7 +59,7 @@ export const config_packages = [
     ],
   },
   {
-    name: "Grow",
+    name: "grow",
     icon: "atom",
     price: "$1,500+",
     duration: "per month",
@@ -90,7 +96,7 @@ export const config_packages = [
     ],
   },
   {
-    name: "Lead",
+    name: "lead",
     icon: "earth",
     price: "$6,000+",
     duration: "per month",

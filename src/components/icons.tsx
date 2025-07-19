@@ -11,6 +11,7 @@ import {
   PuzzleIcon,
   SparklesIcon,
   UserCircle2,
+  XIcon,
 } from "lucide-react";
 
 import { cn } from "~/lib/utils";
@@ -26,6 +27,7 @@ export const Icons = {
   paperclip: PaperclipIcon,
   puzzle: PuzzleIcon,
   atom: AtomIcon,
+  x: XIcon,
   star: (props: LucideProps) => (
     <svg
       stroke="currentColor"
