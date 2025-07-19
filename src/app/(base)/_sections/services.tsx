@@ -58,7 +58,10 @@ export const ServicesSection: React.FC = () => {
                   </ServiceCardDescription>
                 </ServiceCardHeader>
                 <ServiceCardContent>
-                  <ServiceCardImage src={DevelopmentPoster} alt="" />
+                  <ServiceCardImage
+                    src={DevelopmentPoster}
+                    alt="Code editor open with project files, representing our development process."
+                  />
                 </ServiceCardContent>
               </ServiceCard>
               <ServiceCard className="border-b max-md:border-t">
@@ -71,7 +74,10 @@ export const ServicesSection: React.FC = () => {
                   </ServiceCardDescription>
                 </ServiceCardHeader>
                 <ServiceCardContent>
-                  <ServiceCardImage src={DesignPoster} alt="" />
+                  <ServiceCardImage
+                    src={DesignPoster}
+                    alt="UI design workspace with custom layouts, showcasing our design work."
+                  />
                 </ServiceCardContent>
               </ServiceCard>
             </ServiceCardContainer>
@@ -90,7 +96,10 @@ export const ServicesSection: React.FC = () => {
                   </ServiceCardDescription>
                 </ServiceCardHeader>
                 <ServiceCardContent>
-                  <ServiceCardImage src={MarketingPoster} alt="" />
+                  <ServiceCardImage
+                    src={MarketingPoster}
+                    alt="Analytics dashboard displaying marketing performance metrics."
+                  />
                 </ServiceCardContent>
               </ServiceCard>
               <ServiceCard className="border-t">
@@ -103,7 +112,10 @@ export const ServicesSection: React.FC = () => {
                   </ServiceCardDescription>
                 </ServiceCardHeader>
                 <ServiceCardContent>
-                  <ServiceCardImage src={AutomationPoster} alt="" />
+                  <ServiceCardImage
+                    src={AutomationPoster}
+                    alt="Workflow automation dashboard highlighting task processes and triggers."
+                  />
                 </ServiceCardContent>
               </ServiceCard>
             </ServiceCardContainer>
