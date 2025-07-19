@@ -36,12 +36,12 @@ export const ContactContent: React.FC<React.ComponentPropsWithRef<"div">> = ({
   return <div className={cn("flex-1 text-sm/6", className)} {...rest} />;
 };
 
-export const ContactTitle: React.FC<React.ComponentPropsWithRef<"h4">> = ({
+export const ContactTitle: React.FC<React.ComponentPropsWithRef<"h3">> = ({
   className,
   ...rest
 }) => {
   return (
-    <h4
+    <h3
       className={cn("inline font-medium text-stone-950", className)}
       {...rest}
     />

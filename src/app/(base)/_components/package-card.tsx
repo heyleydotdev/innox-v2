@@ -62,12 +62,12 @@ export const PackageHeader: React.FC<React.ComponentPropsWithRef<"div">> = ({
   return <div className={cn("space-y-1 px-(--gutter)", className)} {...rest} />;
 };
 
-export const PackageTitle: React.FC<React.ComponentPropsWithRef<"h4">> = ({
+export const PackageTitle: React.FC<React.ComponentPropsWithRef<"h3">> = ({
   className,
   ...rest
 }) => {
   return (
-    <h4
+    <h3
       className={cn(
         "text-xl font-medium tracking-tight text-balance",
         className,

@@ -46,11 +46,11 @@ export const ServiceCardHeader: React.FC<
   );
 };
 
-export const ServiceCardTitle: React.FC<React.ComponentPropsWithRef<"h4">> = ({
+export const ServiceCardTitle: React.FC<React.ComponentPropsWithRef<"h3">> = ({
   className,
   ...rest
 }) => {
-  return <h4 className={cn("font-medium", className)} {...rest} />;
+  return <h3 className={cn("font-medium", className)} {...rest} />;
 };
 
 export const ServiceCardDescription: React.FC<

@@ -16,7 +16,7 @@ export const BaseHeader: React.FC = () => {
   return (
     <header className="sticky top-0 z-50 h-14 border-b bg-white">
       <div className="container flex h-full items-center gap-6">
-        <Link href={"/"}>
+        <Link href={"/"} aria-label="Go to Homepage">
           <Logo className="h-7" />
         </Link>
         <div className="flex h-full items-center max-md:hidden">

@@ -17,7 +17,10 @@ export const MobileMenu: React.FC = () => {
 
   return (
     <Dialog.Root>
-      <Dialog.Trigger className="group -mr-4 flex h-full w-12 cursor-pointer items-center justify-center text-stone-950 focus:outline-0 md:hidden">
+      <Dialog.Trigger
+        className="group -mr-4 flex h-full w-12 cursor-pointer items-center justify-center text-stone-950 focus:outline-0 md:hidden"
+        aria-label="Open navigation menu"
+      >
         <svg
           width={16}
           height={16}

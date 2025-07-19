@@ -22,7 +22,7 @@ export const WorkforceCardMedium: React.FC<ConfigWorkforce[string]> = ({
         alt={`${name}'s portrait`}
       />
       <div className="absolute inset-x-0 bottom-0 flex h-24 flex-col items-center justify-center gap-0.5 border-t bg-white/40 px-8 py-2 text-center backdrop-blur-xs">
-        <h4 className="font-medium tracking-tight">{name}</h4>
+        <h3 className="font-medium tracking-tight">{name}</h3>
         <p className="font-mono text-sm/6 text-stone-600">{profession}</p>
       </div>
     </div>
@@ -53,7 +53,7 @@ export const WorkforceCardLarge: React.FC<ConfigWorkforce[string]> = ({
     >
       <div className="border-border/50 pointer-events-none absolute -inset-x-5 -top-(--content-spacing) bottom-0 z-10 flex translate-y-2 transform-gpu flex-col gap-1 border-x bg-white/10 pt-8 text-center opacity-0 backdrop-blur-sm transition-all duration-50 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-hover:delay-(--animation-delay) group-hover:duration-300">
         <ContentPointer />
-        <h4 className="text-xl font-medium tracking-tight">{name}</h4>
+        <h3 className="text-xl font-medium tracking-tight">{name}</h3>
         <p className="font-mono text-sm/6 text-stone-600">{profession}</p>
       </div>
       <div className="pointer-events-none relative z-20 h-full w-fit max-w-max">
