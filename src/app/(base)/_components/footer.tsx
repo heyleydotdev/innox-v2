@@ -13,7 +13,8 @@ export const BaseFooter: React.FC = () => {
         <SectionContent className="divide-y">
           <div className="py-8">
             <p className="text-center text-sm/6 text-stone-500">
-              © 2023 Innox Digital Agency. All rights reserved.
+              © {new Date().getFullYear()} Innox Digital Agency. All rights
+              reserved.
             </p>
           </div>
           <div className="-mb-36 pt-16 md:-mb-10">

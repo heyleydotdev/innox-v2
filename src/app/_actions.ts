@@ -30,7 +30,7 @@ export async function cta_action(
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          chat_sid: parseInt(process.env.TG_GROUP_ID!),
+          chat_id: parseInt(process.env.TG_GROUP_ID!),
           reply_to_message_id: parseInt(process.env.TG_GROUP_TOPIC!),
           parse_mode: "markdown",
           text: `

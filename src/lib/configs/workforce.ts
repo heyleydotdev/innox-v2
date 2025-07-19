@@ -45,7 +45,7 @@ export const config_workforce = {
   },
   raveen: {
     name: "Raveen Sarathchandre",
-    profession: "Software Developer",
+    profession: "Software Developer & DevOps Engineer",
     image: RaveenImage,
     image_md: RaveenMdImage,
     styles: { left: 55, translate: 30 },

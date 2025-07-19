@@ -41,7 +41,7 @@ export const WorkforceCardLarge: React.FC<ConfigWorkforce[string]> = ({
 
   return (
     <motion.div
-      className="group absolute inset-y-0 isolate w-max transform-gpu transition-transform ease-in-out [--animation-delay:100ms] group-hover/container:translate-x-(--translate-x) hover:z-50"
+      className="group absolute inset-y-0 isolate h-full w-fit transform-gpu transition-transform ease-in-out [--animation-delay:100ms] group-hover/container:translate-x-(--translate-x) hover:z-50"
       onHoverStart={() => setIsHover(true)}
       onHoverEnd={() => setIsHover(false)}
       style={
@@ -56,7 +56,7 @@ export const WorkforceCardLarge: React.FC<ConfigWorkforce[string]> = ({
         <h4 className="text-xl font-medium tracking-tight">{name}</h4>
         <p className="font-mono text-sm/6 text-stone-600">{profession}</p>
       </div>
-      <div className="pointer-events-none relative z-20 h-full w-auto">
+      <div className="pointer-events-none relative z-20 h-full w-fit max-w-max">
         <Image
           src={image}
           className="h-full w-auto grayscale transition-all select-none group-hover:grayscale-0 group-hover:delay-(--animation-delay)"

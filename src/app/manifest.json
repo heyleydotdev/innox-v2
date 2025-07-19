@@ -1,0 +1,20 @@
+{
+  "name": "Sri Lanka Tour Operators",
+  "short_name": "SLTO",
+  "description": "Discover top-rated Sri Lanka tour operators offering unforgettable travel experiences and trusted vehicle rentals across the island. Explore paradise with ease!",
+  "start_url": "/",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
