@@ -70,7 +70,7 @@ export const StageCardAnchor: React.FC<React.ComponentPropsWithRef<"a">> = ({
 }) => {
   return (
     <a
-      data-fancybox="stages"
+      data-fancybox="stages-g"
       className={cn(
         "relative isolate z-50 block size-full transition-transform duration-100 ease-out will-change-transform group-hover/icontainer:-translate-y-16",
         className,
