@@ -9,6 +9,7 @@ import {
 } from "~/app/(base)/_components/section";
 import {
   StageCard,
+  StageCardAnchor,
   StageCardContainer,
   StageCardImage,
 } from "~/app/(base)/_components/stage-card";
@@ -36,20 +37,54 @@ export const SectionStages: React.FC = () => {
       </SectionContainer>
       <StageCardContainer>
         <InnoxMeetupStroke />
-        <StageCard>
-          <StageCardImage src={Stage2} alt="" />
+        <StageCard caption="Global Pizza Party 2025 - Kandy, Sri Lanka">
+          <StageCardAnchor
+            href="/stages/stage_2.webp"
+            data-caption="Global Pizza Party 2025 - Kandy, Sri Lanka"
+          >
+            <StageCardImage
+              src={Stage2}
+              alt="Global Pizza Party 2025 - Kandy, Sri Lanka"
+            />
+          </StageCardAnchor>
         </StageCard>
-        <StageCard>
-          <StageCardImage src={Stage3} alt="" />
+        <StageCard caption="Bitcoin Deepa 2024 - Sri Lanka">
+          <StageCardAnchor
+            href="/stages/stage_4.webp"
+            data-caption="Bitcoin Deepa 2024 - Sri Lanka"
+          >
+            <StageCardImage src={Stage4} alt="Bitcoin Deepa 2024 - Sri Lanka" />
+          </StageCardAnchor>
         </StageCard>
-        <StageCard>
-          <StageCardImage src={Stage4} alt="" />
+        <StageCard caption="Cosmos 2023 - Sri Lanka">
+          <StageCardAnchor
+            href="/stages/stage_3.webp"
+            data-caption="Cosmos 2023 - Sri Lanka"
+          >
+            <StageCardImage src={Stage3} alt="Cosmos 2023 - Sri Lanka" />
+          </StageCardAnchor>
         </StageCard>
-        <StageCard>
-          <StageCardImage src={Stage5} alt="" />
+        <StageCard caption="Ceylon Bitcoin Meetup 2023">
+          <StageCardAnchor
+            href="/stages/stage_5.webp"
+            data-caption="Ceylon Bitcoin Meetup 2023"
+          >
+            <StageCardImage src={Stage5} alt="Ceylon Bitcoin Meetup 2023" />
+          </StageCardAnchor>
         </StageCard>
-        <StageCard className="md:col-span-1">
-          <StageCardImage src={Stage1} alt="" />
+        <StageCard
+          className="md:col-span-1"
+          caption="Tap Tap Go : Success Network 2023 - Dubai"
+        >
+          <StageCardAnchor
+            href="/stages/stage_1.MP4"
+            data-caption="Tap Tap Go : Success Network 2023 - Dubai"
+          >
+            <StageCardImage
+              src={Stage1}
+              alt="Tap Tap Go : Success Network 2023 - Dubai"
+            />
+          </StageCardAnchor>
         </StageCard>
       </StageCardContainer>
       <SectionContainer className="md:hidden">

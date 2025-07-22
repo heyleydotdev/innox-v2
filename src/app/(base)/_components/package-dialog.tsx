@@ -94,6 +94,7 @@ export const PackageDialog: React.FC<PackageDialogProps> = ({
                           name="email"
                           type="text"
                           placeholder="john@example.com"
+                          required
                           autoFocus
                           aria-invalid={!!state.error}
                         />

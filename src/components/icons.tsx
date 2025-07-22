@@ -9,6 +9,7 @@ import {
   Loader2Icon,
   PaperclipIcon,
   PuzzleIcon,
+  RadioIcon,
   SparklesIcon,
   UserCircle2,
   XIcon,
@@ -28,6 +29,7 @@ export const Icons = {
   puzzle: PuzzleIcon,
   atom: AtomIcon,
   x: XIcon,
+  radio: RadioIcon,
   star: (props: LucideProps) => (
     <svg
       stroke="currentColor"

@@ -1,3 +1,5 @@
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
 import type { Metadata } from "next";
 
 import { CommentsSection } from "~/app/(base)/_sections/comments";

@@ -38,6 +38,7 @@ export const CtaForm: React.FC = () => {
             name="email"
             className="h-10"
             placeholder="john@example.com"
+            required
           />
           <PrimaryButton className="h-10 gap-2 px-4">
             {pending && <Spinner />}
