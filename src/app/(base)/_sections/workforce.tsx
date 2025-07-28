@@ -31,6 +31,22 @@ export const WorkforceSection: React.FC = () => {
         </SectionContent>
         <WorkforceSmall />
         <WorkforceLarge />
+        <div
+          id="shoutout-banner"
+          className="scroll-mt-[80vh] bg-stone-800 px-3 py-1.5"
+        >
+          <p className="text-center text-sm/6 text-balance text-stone-300">
+            Shoutout to{" "}
+            <a
+              href="https://tshirtmalli.lk?utm_source=innox.pro&utm_medium=referral&utm_campaign=Innox%20Solutions"
+              target="_blank"
+              className="font-medium text-amber-600 underline"
+            >
+              T-SHIRT MALLI
+            </a>{" "}
+            for the awesome hoodies! Loving the fresh look for the team!
+          </p>
+        </div>
       </SectionContainer>
     </Section>
   );
