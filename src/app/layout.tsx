@@ -19,13 +19,13 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://innox.pro"),
   title: {
-    template: `%s - Innox Digital Agency`,
+    template: `%s - Innox Solutions`,
     default: "Innox - Your vision, our innovation",
   },
   description:
     "We offer innovative solutions across various fields, including design, development, automation, and more. Committed to bringing your ideas to life and ensuring success in the digital world.",
   openGraph: {
-    siteName: "Innox Digital Agency",
+    siteName: "Innox Solutions",
   },
 };
 
