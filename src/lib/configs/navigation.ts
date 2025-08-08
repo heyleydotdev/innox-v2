@@ -24,12 +24,12 @@ export const social_navigation = [
   {
     name: "X (Twitter)",
     icon: "twitter",
-    href: "https://x.com/_innoX_Pro",
+    href: "https://x.com/innoxdotpro",
   },
   {
     name: "Instagram",
     icon: "instagram",
-    href: "https://www.instagram.com/_innox_pro_/",
+    href: "https://www.instagram.com/innoxdotpro/",
   },
   {
     name: "Facebook",

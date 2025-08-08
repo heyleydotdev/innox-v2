@@ -51,7 +51,7 @@ export const SupportSection: React.FC = () => {
                   we’re working on next.
                 </ContactDescription>
               </ContactContent>
-              <ContactButton href="https://www.instagram.com/_innox_pro_/">
+              <ContactButton href="https://www.instagram.com/innoxdotpro/">
                 Follow @_innox_pro_
               </ContactButton>
             </Contact>
