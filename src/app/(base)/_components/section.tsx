@@ -3,6 +3,7 @@
 import type { SectionsContextValue } from "~/app/(base)/_components/section-ctx";
 
 import { useCallback, useLayoutEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { useInView } from "motion/react";
 
 import {
@@ -10,30 +11,38 @@ import {
   SectionsContext,
   useSections,
 } from "~/app/(base)/_components/section-ctx";
-import { TextScramble } from "~/components/text-scramble";
 import { cn } from "~/lib/utils";
 
 export const SectionsProvider: React.FC<React.PropsWithChildren> = ({
   children,
 }) => {
-  const [sections, setSections] = useState<SectionsContextValue["sections"]>(
-    [],
-  );
+  const pathname = usePathname();
+  const [sections, setSections] = useState<SectionsContextValue["sections"]>({
+    pathname,
+    ids: [],
+  });
 
   const reg_section: SectionsContextValue["reg_section"] = useCallback(
     (section) => {
       setSections((prev) =>
-        !prev.includes(section) ? [...prev, section] : prev,
+        pathname !== prev.pathname
+          ? { pathname, ids: [section] }
+          : {
+              pathname,
+              ids: !prev.ids.includes(section)
+                ? [...prev.ids, section]
+                : prev.ids,
+            },
       );
     },
-    [],
+    [pathname],
   );
 
   return (
     <SectionsContext
       value={{
         sections: sections,
-        total_sections: sections.length,
+        total_sections: sections.ids.length,
         reg_section,
       }}
     >
@@ -75,7 +84,7 @@ export const SectionSeparator: React.FC<SectionSeparatorProps> = ({
 }) => {
   const { reg_section, sections, total_sections } = useSections();
 
-  const index = sections.indexOf(title);
+  const index = sections.ids.indexOf(title);
   const c = (index >= 0 ? index + 1 : 0).toString().padStart(2, "0");
   const t = total_sections.toString().padStart(2, "0");
 
@@ -88,28 +97,17 @@ export const SectionSeparator: React.FC<SectionSeparatorProps> = ({
       <div className="pointer-events-none grid h-9 grid-cols-[--spacing(26)_minmax(0,1fr)_--spacing(26)] border select-none">
         <div>
           <p
-            className="text-center font-mono text-xs/9 tracking-tight text-stone-300"
+            className="text-center font-mono text-xs/9 tracking-tight text-stone-400 transition-opacity duration-500"
+            style={{ opacity: total_sections > 0 ? 1 : 0 }}
             aria-label={`Section ${c}`}
           >
-            [{" "}
-            <TextScramble
-              as="span"
-              className="text-stone-800"
-              trigger={!!total_sections}
-            >
-              {c}
-            </TextScramble>{" "}
-            /{" "}
-            <TextScramble as="span" trigger={index >= 0}>
-              {t}
-            </TextScramble>{" "}
-            ]
+            [ <span className="text-stone-800">{c}</span> / {t} ]
           </p>
         </div>
         <div className="border-x" />
         <div>
           <p
-            className="text-center font-mono text-xs/9 tracking-tight text-stone-300 uppercase"
+            className="text-center font-mono text-xs/9 tracking-tight text-stone-400 uppercase"
             aria-label={title}
           >
             [ <span className="text-stone-800">{title}</span> ]

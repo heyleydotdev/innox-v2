@@ -19,12 +19,12 @@ import { cn } from "~/lib/utils";
 
 export const Icons = {
   earth: EarthIcon,
-  circlePower: CirclePowerIcon,
+  circle_power: CirclePowerIcon,
   sparkles: SparklesIcon,
   spinner: Loader2Icon,
   chevron_left: ChevronLeftIcon,
-  chevronRight: ChevronRightIcon,
-  userCircle: UserCircle2,
+  chevron_right: ChevronRightIcon,
+  user_circle: UserCircle2,
   paperclip: PaperclipIcon,
   puzzle: PuzzleIcon,
   atom: AtomIcon,

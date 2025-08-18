@@ -1,0 +1,9 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["/src/posts/*.json"],
+      "url": "/posts.schema.json"
+    }
+  ],
+  "typescript.tsdk": "node_modules\\typescript\\lib"
+}

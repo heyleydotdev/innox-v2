@@ -1,17 +1,20 @@
 {
   "name": "innox-v2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
+    "dev": "bun run posts:gen && next dev --turbopack",
+    "build": "bun run posts:gen && next build",
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts"
+    "clean": "git clean -xdf .next .open-next",
+    "posts:gen": "tsx ./src/lib/posts-generator.ts",
+    "cf:typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
+    "cf:build": "bun run clean && bun run posts:gen && opennextjs-cloudflare build",
+    "cf:deploy": "bun run cf:build && opennextjs-cloudflare deploy",
+    "cf:preview": "bun run cf:build && opennextjs-cloudflare preview"
   },
   "dependencies": {
     "@fancyapps/ui": "^6.0.16",
@@ -38,7 +41,9 @@
     "eslint-config-next": "15.3.2",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "sharp": "^0.34.3",
     "tailwindcss": "^4",
+    "tsx": "^4.20.4",
     "typescript": "^5",
     "wrangler": "^4.25.0"
   }

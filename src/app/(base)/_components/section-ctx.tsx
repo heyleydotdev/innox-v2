@@ -3,7 +3,10 @@
 import { createContext, use } from "react";
 
 export interface SectionsContextValue {
-  sections: string[];
+  sections: {
+    pathname: string;
+    ids: string[];
+  };
   total_sections: number;
   reg_section(name: string): void;
 }

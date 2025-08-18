@@ -12,6 +12,7 @@ export const main_navigation = [
   { name: "Comments", href: "/#comments" },
   { name: "Stages", href: "/#stages" },
   { name: "Get Support", href: "/#support" },
+  { name: "Blog", href: "/posts" },
 ] satisfies MainNavigation[];
 
 export interface SocialNavigation {

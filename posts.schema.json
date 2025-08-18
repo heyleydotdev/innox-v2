@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "innox_posts_schema",
+  "title": "Blog Post",
+  "type": "object",
+  "properties": {
+    "url": {
+      "title": "Post URL",
+      "type": "string",
+      "format": "url"
+    },
+    "title": {
+      "title": "Post title",
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 256
+    },
+    "description": {
+      "title": "Post excerpt",
+      "type": "string",
+      "minLength": 24,
+      "maxLength": 512
+    },
+    "thumbnail": {
+      "title": "Post thumbnail",
+      "type": "string",
+      "format": "url"
+    },
+    "published": {
+      "title": "Post published date",
+      "type": "string",
+      "format": "date"
+    },
+    "blur_data": {
+      "title": "Thumbnail blur data url",
+      "type": "string"
+    }
+  },
+  "required": ["url", "title", "description", "thumbnail", "published"],
+  "additionalProperties": false
+}
