@@ -35,7 +35,11 @@ jobs:
       - name: Deploy client
         uses: cloudflare/wrangler-action@v3
         with:
+          secrets: |
+            TG_BOT_TOKEN
+            TG_GROUP_ID
+            TG_GROUP_TOPIC
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy .open-next --branch=main --project-name=innox-v2
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          # accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          # command: pages deploy .open-next --branch=main --project-name=innox-v2
+          # gitHubToken: ${{ secrets.GITHUB_TOKEN }}
