@@ -28,21 +28,21 @@ export const getPosts = async () => {
     );
 
   return Promise.all(
-    files
-      .map(async (_file) => {
-        const key = path.parse(_file).name;
-        const file_path = path.join(directory, _file);
-        const content = await fs.readFile(file_path, "utf-8");
-        const json = JSON.parse(content);
-        const data = $schema_posts
-          .omit({ blur_data: true })
-          .safeParse({ key, ...json });
+    files.map(async (_file) => {
+      const key = path.parse(_file).name;
+      const file_path = path.join(directory, _file);
+      const content = await fs.readFile(file_path, "utf-8");
+      const json = JSON.parse(content);
+      const data = $schema_posts
+        .omit({ blur_data: true })
+        .safeParse({ key, ...json });
 
-        return data.success ? data.data : undefined;
-      })
-      .filter((data): data is Promise<z.infer<typeof $schema_posts>> => !!data),
+      return data.success ? data.data : undefined;
+    }),
   ).then((data) =>
-    data.sort((a, b) => b.published.getTime() - a.published.getTime()),
+    data
+      .filter((data): data is z.infer<typeof $schema_posts> => !!data)
+      .sort((a, b) => b.published.getTime() - a.published.getTime()),
   );
 };
 
