@@ -29,10 +29,10 @@ jobs:
       - name: Install dependencies
         run: bun install
 
-      - name: Build client
+      - name: Build
         run: bun run cf:build
 
-      - name: Deploy client
+      - name: Deploy to Cloudflare
         uses: cloudflare/wrangler-action@v3
         with:
           secrets: |
@@ -40,6 +40,3 @@ jobs:
             TG_GROUP_ID
             TG_GROUP_TOPIC
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          # accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          # command: pages deploy .open-next --branch=main --project-name=innox-v2
-          # gitHubToken: ${{ secrets.GITHUB_TOKEN }}
