@@ -10,11 +10,17 @@ export const $schema_posts = z.object({
   title: z.string().min(2).max(256),
   description: z.string().min(24).max(512),
   thumbnail: z.url(),
-  published: z.string().transform((s) => new Date(s)),
+  published: z
+    .string()
+    .transform((s) => new Date(s))
+    .pipe(z.date()),
   blur_data: z.string().min(1).startsWith("data:image/"),
 });
 
-const lib_posts = path.join(process.cwd(), "src/lib/posts.ts");
+const data_path = path.join(
+  process.cwd(),
+  "src/app/(base)/posts/_data.generated.ts",
+);
 
 export const getPosts = async () => {
   const path = await import("path");
@@ -76,9 +82,9 @@ async function main() {
   }
 
   const content =
-    "const posts = " + JSON.stringify(_posts) + "; export default posts";
+    "const posts=" + JSON.stringify(_posts) + ";export default posts;";
 
-  await fs.writeFile(lib_posts, content);
+  await fs.writeFile(data_path, content);
 }
 
 main();
