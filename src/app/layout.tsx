@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import type { Metadata } from "next";
 
 import { Geist, Geist_Mono } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import { cn } from "~/lib/utils";
 
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
       >
         {children}
       </body>
+      <GoogleAnalytics gaId="G-DKXCJT65E5" />
     </html>
   );
 }
