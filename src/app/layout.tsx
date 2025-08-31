@@ -1,6 +1,6 @@
 import "../styles/globals.css";
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import { Geist, Geist_Mono } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -28,6 +28,12 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "Innox Solutions",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({ children }: React.PropsWithChildren) {
