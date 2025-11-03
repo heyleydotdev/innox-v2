@@ -31,7 +31,7 @@ export const WorkforceSection: React.FC = () => {
         </SectionContent>
         <WorkforceSmall />
         <WorkforceLarge />
-        <div
+        {/* <div
           id="shoutout-banner"
           className="scroll-mt-[80vh] bg-stone-800 px-3 py-1.5"
         >
@@ -46,7 +46,7 @@ export const WorkforceSection: React.FC = () => {
             </a>{" "}
             for the awesome hoodies! Loving the fresh look for the team!
           </p>
-        </div>
+        </div> */}
       </SectionContainer>
     </Section>
   );
