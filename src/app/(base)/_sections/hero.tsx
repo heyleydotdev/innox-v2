@@ -37,7 +37,7 @@ export const HeroSection: React.FC = () => {
               <div className="bg-border h-4 w-px" />
               <p className="mr-2 text-[0.8rem]/6 whitespace-nowrap text-stone-500">
                 Trusted by{" "}
-                <span className="font-medium text-stone-950">750+</span> clients{" "}
+                <span className="font-medium text-stone-950">925+</span> clients{" "}
                 <span className="max-md:hidden">
                   for seamless digital solutions
                 </span>
