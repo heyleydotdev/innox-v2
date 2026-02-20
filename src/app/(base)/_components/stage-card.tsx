@@ -18,10 +18,10 @@ export const StageCardContainer: React.FC<
         ref={ref}
         className={cn(
           "[--side-padding:max(var(--container-padding),calc((100%-var(--breakpoint-xs))/2+var(--container-padding)))]",
-          "grid grid-cols-[repeat(5,100%)]",
+          "grid grid-cols-[repeat(9,100%)]",
           "no-scrollbar relative snap-x snap-mandatory overflow-x-auto",
           "max-md:scroll-pr-(--side-padding) max-md:px-(--side-padding)",
-          "md:grid-cols-5 md:grid-rows-2 md:gap-1 md:border-x md:border-t md:p-1",
+          "md:grid-cols-5 md:grid-rows-3 md:gap-1 md:border-x md:border-t md:p-1",
           className,
         )}
         {...rest}
@@ -55,8 +55,8 @@ export const StageCard: React.FC<StageCardProps> = ({
         )}
       >
         {children}
-        <div className="dark absolute inset-x-0 bottom-0 flex h-16 w-full items-center overflow-hidden px-4">
-          <p className="line-clamp-2 text-sm">{caption}</p>
+        <div className="dark absolute inset-x-0 bottom-0 flex h-12 w-full items-center overflow-hidden px-4">
+          <p className="truncate text-sm">{caption}</p>
         </div>
       </div>
     </div>
@@ -72,7 +72,7 @@ export const StageCardAnchor: React.FC<React.ComponentPropsWithRef<"a">> = ({
     <a
       data-fancybox="stages-g"
       className={cn(
-        "relative isolate z-50 block size-full transition-transform duration-100 ease-out will-change-transform group-hover/icontainer:-translate-y-16",
+        "relative isolate z-50 block size-full transition-transform duration-100 ease-out will-change-transform group-hover/icontainer:-translate-y-12",
         className,
       )}
       {...rest}
