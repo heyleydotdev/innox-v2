@@ -39,7 +39,7 @@ export const SectionStages: React.FC = () => {
         <InnoxMeetupStroke />
         <StageCard caption="Global Pizza Party 2025 - Kandy, Sri Lanka">
           <StageCardAnchor
-            href={Stage2.src}
+            href="/stages/stage_2.webp"
             data-caption="Global Pizza Party 2025 - Kandy, Sri Lanka"
           >
             <StageCardImage
@@ -50,7 +50,7 @@ export const SectionStages: React.FC = () => {
         </StageCard>
         <StageCard caption="Bitcoin Deepa 2024 - Sri Lanka">
           <StageCardAnchor
-            href={Stage4.src}
+            href="/stages/stage_4.webp"
             data-caption="Bitcoin Deepa 2024 - Sri Lanka"
           >
             <StageCardImage src={Stage4} alt="Bitcoin Deepa 2024 - Sri Lanka" />
@@ -58,7 +58,7 @@ export const SectionStages: React.FC = () => {
         </StageCard>
         <StageCard caption="Cosmos 2023 - Sri Lanka">
           <StageCardAnchor
-            href={Stage3.src}
+            href="/stages/stage_3.webp"
             data-caption="Cosmos 2023 - Sri Lanka"
           >
             <StageCardImage src={Stage3} alt="Cosmos 2023 - Sri Lanka" />
@@ -66,7 +66,7 @@ export const SectionStages: React.FC = () => {
         </StageCard>
         <StageCard caption="Ceylon Bitcoin Meetup 2023">
           <StageCardAnchor
-            href={Stage5.src}
+            href="/stages/stage_5.webp"
             data-caption="Ceylon Bitcoin Meetup 2023"
           >
             <StageCardImage src={Stage5} alt="Ceylon Bitcoin Meetup 2023" />
