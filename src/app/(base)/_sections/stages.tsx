@@ -67,7 +67,7 @@ export const SectionStages: React.FC = () => {
           caption="Web3 Ceylon Tour 2025 - Ella, Sri Lanka"
         >
           <StageCardAnchor
-            href="/stages/stage_9.mp4"
+            href="/stages/stage_9.webm"
             data-caption="Web3 Ceylon Tour 2025 - Ella, Sri Lanka"
           >
             <StageCardImage
@@ -130,7 +130,7 @@ export const SectionStages: React.FC = () => {
           caption="Tap Tap Go : Success Network 2023 - Dubai"
         >
           <StageCardAnchor
-            href="/stages/stage_1.MP4"
+            href="/stages/stage_1.webm"
             data-caption="Tap Tap Go : Success Network 2023 - Dubai"
           >
             <StageCardImage
